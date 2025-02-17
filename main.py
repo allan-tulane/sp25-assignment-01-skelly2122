@@ -11,15 +11,27 @@ def foo(x):
         return foo(x - 1) + foo(x - 2)
 
 def longest_run(mylist, key):
+    # Initialize the longest run found so far to zero.
     max_run = 0
+    
+    # Initialize the counter for the current consecutive run of 'key' to zero.
     current_run = 0
+    
+    # Loop through each element in the list.
     for num in mylist:
+        # Check if the current element equals the target key.
         if num == key:
+            # If it does, increase the current run count by 1.
             current_run += 1
+            # Update max_run if the current run is longer than any previously recorded run.
             max_run = max(max_run, current_run)
         else:
+            # If the current element is not the key, reset the current run counter.
             current_run = 0
+            
+    # After going through the entire list, return the longest run length found.
     return max_run
+
 
 
 class Result:
