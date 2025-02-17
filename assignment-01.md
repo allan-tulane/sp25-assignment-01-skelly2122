@@ -50,14 +50,10 @@ $$
 
   - 2b. (6 pts) What does this function do, in your own words?  
 
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
+      This function computes the Fibonacci number at position `x`.
+      For x = 0 or x = 1, it returns x (since F(0)=0 and F(1)=1).
+      For x > 1, it recursively computes the sum of the two preceding Fibonacci numbers,
+       thereby generating the Fibonacci sequence.
   
 
 3. **Parallelism and recursion** (26 pts)
@@ -80,40 +76,21 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 
   - 3b. (4 pts) What is the Work and Span of this implementation?  
 
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
+
+    Work: O(n) – each element is processed once.
+    Span: O(n) – the loop processes elements sequentially.
 
 
   - 3c. (7 pts) Next, implement a `longest_run_recursive`, a recursive, divide and conquer implementation. This is analogous to our implementation of `sum_list_recursive`. To do so, you will need to think about how to combine partial solutions from each recursive call. Make use of the provided class `Result`.   
 
   - 3d. (4 pts) What is the Work and Span of this sequential algorithm?  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
+
+    Work: O(n) – every element is examined once during the recursive merge process.
+    Span: O(n) – because the recursive calls are performed sequentially in the worst case.
 
 
   - 3e. (4 pts) Assume that we parallelize in a similar way we did with `sum_list_recursive`. That is, each recursive call spawns a new thread. What is the Work and Span of this algorithm?  
 
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
+    Work: O(n) – the total work remains the same.
+    Span: O(log n) – with parallel recursive calls, the height of the recursion tree (i.e., the span) is O(log n).
+
