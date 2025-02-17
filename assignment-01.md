@@ -38,7 +38,7 @@ $$
 \begin{array}{l}
 \mathit{foo}~x =   \\
 ~~~~\texttt{if}{}~~x \le 1~~\texttt{then}{}\\
-~~~~~~~~x\\   
+~~~~~~x\\   
 ~~~~\texttt{else}\\
 ~~~~~~~~\texttt{let}{}~~(ra, rb) = (\mathit{foo}~(x-1))~~,~~(\mathit{foo}~(x-2))~~\texttt{in}{}\\  
 ~~~~~~~~~~~~ra + rb\\  
