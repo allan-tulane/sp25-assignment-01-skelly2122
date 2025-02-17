@@ -13,7 +13,7 @@ def foo(x):
 def longest_run(mylist, key):
     max_run = 0
     current_run = 0
-    for num in myarray:
+    for num in mylist:
         if num == key:
             current_run += 1
             max_run = max(max_run, current_run)
@@ -95,7 +95,7 @@ def longest_run_recursive(mylist, key):
         return Result(combined_left_size, combined_right_size, combined_longest_size, combined_is_entire_range)
     
     # Use to_value to return the longest run from the Result object.
-    return to_value(helper(myarray))
+    return to_value(helper(mylist))
 
 
 
